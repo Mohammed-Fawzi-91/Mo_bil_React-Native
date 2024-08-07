@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3.4.0 # Update to the latest version
+        uses: actions/checkout@v3.4.0
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3.6.0 # Update to the latest version
+        uses: actions/setup-node@v3.6.0
         with:
-          node-version: 20 # Use the numeric version without quotes
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
@@ -33,8 +33,11 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Install Fastlane
-        run: gem install fastlane
+      - name: Install Bundler
+        run: gem install bundler
+
+      - name: Install Fastlane dependencies
+        run: bundle install
 
       - name: Deploy to TestFlight
-        run: fastlane ios beta
+        run: bundle exec fastlane ios beta

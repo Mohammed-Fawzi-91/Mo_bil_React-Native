@@ -1,0 +1,11 @@
+# fastlane/Fastfile
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    # Add your build and deploy commands here
+    build_app(scheme: "YourAppScheme")
+    upload_to_testflight
+  end
+end
