@@ -87,7 +87,7 @@ function App(): React.JSX.Element {
             <DebugInstructions />
           </Section>
           <Section title="Learn More">
-            Read the doergregrgcs to discover what to do next:
+            Read the doergregrgcs to disergerbcover what to do next:
           </Section>
           <LearnMoreLinks />
         </View>
