@@ -36,8 +36,6 @@ jobs:
       - name: Install Bundler
         run: gem install bundler
 
-      - name: Install Fastlane dependencies
-        run: bundle install
 
       - name: Deploy to TestFlight
         run: bundle exec fastlane ios beta
